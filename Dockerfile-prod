@@ -20,6 +20,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install and cache dependencies
 RUN yarn
 
+COPY . .
+
 #build the project for production
 RUN yarn build
 
