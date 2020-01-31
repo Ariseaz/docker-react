@@ -23,5 +23,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 # n/b: these dependencies are installed inside docker
 # it runs the command "yarn" which is an equivalent of "yarn add"
 RUN yarn
+
+COPY . .
+
 # start the container
 CMD ["yarn", "start"]
