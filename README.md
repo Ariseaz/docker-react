@@ -1,3 +1,7 @@
+## DOCKER REACT WITH NODEJS
+A write up is written about this project
+
+## YARN USED UNLIKE NOT NODE
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
