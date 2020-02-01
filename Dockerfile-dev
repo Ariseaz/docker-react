@@ -5,20 +5,20 @@ FROM node:alpine
 # set working directory
 WORKDIR /app
 
-# copy package.json and yarn.lock
+# copy package.json and npm.lock
 # package.json to install the packages from 
-# and yarn.lock for a package called chokidar used for reloading
+# and npm.lock for a package called chokidar used for reloading
 
 COPY package.json /app/package.json
-COPY yarn.lock /app/yarn.lock
+COPY npm.lock /app/npm.lock
 
 # install and cache dependencies
 # n/b: these dependencies are installed inside docker
-# it runs the command "yarn" which is an equivalent of "yarn add"
-RUN yarn
+# it runs the command "npm" which is an equivalent of "npm add"
+RUN npm
 
 # copy folder content to docker image
 COPY . .
 
 # start the container
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
